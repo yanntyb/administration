@@ -24,20 +24,37 @@
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
-                    <span class="card-title center">{{ user.getName()|trim }}</span>
+                    <span class="card-title center">Edit {{ article.getTitle() }}</span>
+
+                    <form action="/article/submit" method="post">
+                        <input type="hidden" name="id" value="{{ article.getId() }}">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input name="title" value="{{ article.getTitle() }}" id="name" type="text" class="validate">
+                                <label class="active" for="title">Title</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <textarea name="content" id="content" class="materialize-textarea">{{ article.getContent() }}</textarea>
+                                <label class="active" for="content">Content</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type ="submit" class="right btn waves-effect waves-light" value = "Modification"/>
+                        </div>
+                    </form>
                 </div>
                 <div class="card-action center">
                     <nav>
                         <div class="nav-wrapper indigo lighten-3 orange-text text-darken-4">
                             <ul>
                                 <li>
-                                    <a href="/user/delete/{{ user.getId() }}">Delete</a>
+                                    <a href="/article/delete/{{ article.getId() }}">Delete</a>
                                 </li>
                                 <li class="active">
-                                    <a href="/user/edit/{{ user.getId() }}">Edit</a>
+                                    <a href="/article/edit/{{ article.getId() }}">Edit</a>
                                 </li>
                                 <li>
-                                    <a href="/user/info/{{ user.getId() }}">Info</a>
+                                    <a href="/article/info/{{ article.getId() }}">Info</a>
                                 </li>
                             </ul>
                         </div>

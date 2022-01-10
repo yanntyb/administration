@@ -104,10 +104,16 @@ class __TwigTemplate_54d4e4feb148f4835a53fdf66b0f7e87 extends Template
         echo "\">Delete</a>
                                 </li>
                                 <li>
-                                    <a class=\"active\" href=\"/article/edit/";
+                                    <a href=\"/article/edit/";
         // line 39
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 39, $this->source); })()), "getId", [], "method", false, false, false, 39), "html", null, true);
         echo "\">Edit</a>
+                                </li>
+                                <li class=\"active\">
+                                    <a href=\"/article/info/";
+        // line 42
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 42, $this->source); })()), "getId", [], "method", false, false, false, 42), "html", null, true);
+        echo "\">Info</a>
                                 </li>
                             </ul>
                         </div>
@@ -131,7 +137,7 @@ class __TwigTemplate_54d4e4feb148f4835a53fdf66b0f7e87 extends Template
 
     public function getDebugInfo()
     {
-        return array (  109 => 39,  103 => 36,  91 => 29,  87 => 28,  83 => 27,  77 => 23,  73 => 22,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  115 => 42,  109 => 39,  103 => 36,  91 => 29,  87 => 28,  83 => 27,  77 => 23,  73 => 22,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -174,7 +180,10 @@ class __TwigTemplate_54d4e4feb148f4835a53fdf66b0f7e87 extends Template
                                     <a href=\"/article/delete/{{ article.getId() }}\">Delete</a>
                                 </li>
                                 <li>
-                                    <a class=\"active\" href=\"/article/edit/{{ article.getId() }}\">Edit</a>
+                                    <a href=\"/article/edit/{{ article.getId() }}\">Edit</a>
+                                </li>
+                                <li class=\"active\">
+                                    <a href=\"/article/info/{{ article.getId() }}\">Info</a>
                                 </li>
                             </ul>
                         </div>

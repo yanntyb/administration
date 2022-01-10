@@ -77,6 +77,27 @@ class ArticleController extends Controller
     }
 
     public function edit(int $id){
+        $articleBean = R::findOne("article","id = ?",[$id]);
+        if(!is_null($articleBean)){
+            $article = (new Article())->setId($articleBean->id)->setTitle($articleBean->title)->setContent($articleBean->content);
+            $this->render("articles/edit.html.twig",["article" => $article]);
+        }
+        else{
+            $this->showPage();
+        }
+    }
 
+    public function update(){
+        if(isset($_POST["id"])){
+            $article = R::findOne("article","id = ?", [$_POST["id"]]);
+            if($article){
+                $article->title = $_POST["title"];
+                $article->content = $_POST["content"];
+                R::store($article);
+                $this->edit($article->id);
+                return null;
+            }
+        }
+        $this->showPage();
     }
 }

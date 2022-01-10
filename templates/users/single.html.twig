@@ -26,21 +26,24 @@
                 <div class="card-content white-text">
                     <span class="card-title center">{{ user.getName()|trim }}</span>
                     <p>Mot de passe : {{ user.getPass() }}</p>
-                    <span>Article :</span>
-                    <table>
-                        <thead>
+                    <div class="container">
+                        <span class="card-title center">Articles :</span>
+                        <table>
+                            <thead>
                             <th>ID</th>
                             <th>Title</th>
-                        </thead>
-                        <tbody>
+                            </thead>
+                            <tbody>
                             {% for article in user.getArticles() %}
                                 <tr>
                                     <td><a href="/article/info/{{ article.getId() }}">{{ article.getId() }}</a></td>
                                     <td>{{ article.getTitle() }}</td>
                                 </tr>
                             {% endfor %}
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
                 <div class="card-action center">
                     <nav>

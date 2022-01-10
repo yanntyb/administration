@@ -22,6 +22,7 @@ $router->addRoute("populate Article", "/article/populate", [ArticleController::c
 $router->addRoute("info Article","/article/info/{id}", [ArticleController::class, "info"]);
 $router->addRoute("delete Article","/article/delete/{id}",[ArticleController::class, "delete"]);
 $router->addRoute("edit Article","/article/edit/{id}", [ArticleController::class, "edit"]);
+$router->addRoute("submit Edit Article","/article/submit", [ArticleController::class, "update"]);
 
 /**
  * User Management
@@ -30,7 +31,7 @@ $router->addRoute("populate User", "/user/populate",[UserController::class, "pop
 $router->addRoute("info User", "/user/info/{id}", [UserController::class, "info"]);
 $router->addRoute("delete User", "/user/delete/{id}", [UserController::class, "delete"]);
 $router->addRoute("edit User", "/user/edit/{id}", [UserController::class, "edit"]);
-$router->addRoute("submit Edit", "/user/submit", [UserController::class, "update"]);
+$router->addRoute("submit Edit User", "/user/submit", [UserController::class, "update"]);
 
 $query = str_replace("/index.php","",$_SERVER['PHP_SELF']);
 $router->handleQuery($query);
