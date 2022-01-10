@@ -1,0 +1,40 @@
+{
+    "name": "yanntyb/administration",
+    "description": "administration",
+    "autoload": {
+        "psr-4": {
+            "Yanntyb\\App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yanntyb\\Router\\Test\\": "test/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yann tyb",
+            "email": "yanntyb.lbc@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "twig/twig": "^3.3",
+        "gabordemooij/redbean": "^5.7",
+        "yanntyb/router": "dev-main",
+        "yanntyb/populate": "dev-main",
+        "twig/string-extra": "^3.3"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:yanntyb-lib/router.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:yanntyb-lib/populate.git"
+        }
+    ]
+}
