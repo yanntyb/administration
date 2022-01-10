@@ -786,21 +786,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yanntyb-lib/populate.git",
-                "reference": "24d52b5d83a2f2e35d0f07c90b77663e5c364583"
+                "reference": "acbc98e333294eb6f804711ee63db0167e9840d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yanntyb-lib/populate/zipball/24d52b5d83a2f2e35d0f07c90b77663e5c364583",
-                "reference": "24d52b5d83a2f2e35d0f07c90b77663e5c364583",
+                "url": "https://api.github.com/repos/yanntyb-lib/populate/zipball/acbc98e333294eb6f804711ee63db0167e9840d5",
+                "reference": "acbc98e333294eb6f804711ee63db0167e9840d5",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
                 "gabordemooij/redbean": "^5.7",
-                "symfony/var-dumper": "^6.0"
+                "symfony/var-dumper": "^6.0",
+                "yanntyb/populate": "dev-main"
             },
             "default-branch": true,
-            "type": "package",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "Yanntyb\\Populate\\": "src/"
@@ -816,7 +817,7 @@
                 "source": "https://github.com/yanntyb-lib/populate/tree/main",
                 "issues": "https://github.com/yanntyb-lib/populate/issues"
             },
-            "time": "2022-01-10T12:15:07+00:00"
+            "time": "2022-01-10T16:32:50+00:00"
         },
         {
             "name": "yanntyb/router",
