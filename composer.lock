@@ -786,12 +786,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yanntyb-lib/populate.git",
-                "reference": "acbc98e333294eb6f804711ee63db0167e9840d5"
+                "reference": "0ba61022c1f127f6dbb5e2911c418444136e47c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yanntyb-lib/populate/zipball/acbc98e333294eb6f804711ee63db0167e9840d5",
-                "reference": "acbc98e333294eb6f804711ee63db0167e9840d5",
+                "url": "https://api.github.com/repos/yanntyb-lib/populate/zipball/0ba61022c1f127f6dbb5e2911c418444136e47c0",
+                "reference": "0ba61022c1f127f6dbb5e2911c418444136e47c0",
                 "shasum": ""
             },
             "require": {
@@ -817,7 +817,7 @@
                 "source": "https://github.com/yanntyb-lib/populate/tree/main",
                 "issues": "https://github.com/yanntyb-lib/populate/issues"
             },
-            "time": "2022-01-10T16:32:50+00:00"
+            "time": "2022-01-10T16:53:30+00:00"
         },
         {
             "name": "yanntyb/router",

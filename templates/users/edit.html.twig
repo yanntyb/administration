@@ -24,7 +24,24 @@
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
-                    <span class="card-title center">{{ user.getName()|trim }}</span>
+                    <span class="card-title center">Edit {{ user.getName() }}</span>
+
+                    <form action="/user/submit" method="post">
+                        <input type="hidden" name="id" value="{{ user.getId() }}">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input name="name" value="{{ user.getName() }}" id="name" type="text" class="validate">
+                                <label class="active" for="passwird">Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input name="pass" value="{{ user.getPass() }}" id="password" type="text" class="validate">
+                                <label class="active" for="passwird">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type ="submit" class="right btn waves-effect waves-light" value = "Modification"/>
+                        </div>
+                    </form>
                 </div>
                 <div class="card-action center">
                     <nav>

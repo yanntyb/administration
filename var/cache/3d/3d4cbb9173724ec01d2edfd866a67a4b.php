@@ -78,10 +78,36 @@ class __TwigTemplate_3770aa66f0165f24e849df19f468307d extends Template
         <div class=\"col s12 m12\">
             <div class=\"card blue-grey darken-1\">
                 <div class=\"card-content white-text\">
-                    <span class=\"card-title center\">";
+                    <span class=\"card-title center\">Edit ";
         // line 27
-        echo twig_escape_filter($this->env, twig_trim_filter(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 27, $this->source); })()), "getName", [], "method", false, false, false, 27)), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 27, $this->source); })()), "getName", [], "method", false, false, false, 27), "html", null, true);
         echo "</span>
+
+                    <form action=\"/user/submit\" method=\"post\">
+                        <input type=\"hidden\" name=\"id\" value=\"";
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 30, $this->source); })()), "getId", [], "method", false, false, false, 30), "html", null, true);
+        echo "\">
+                        <div class=\"row\">
+                            <div class=\"input-field col s6\">
+                                <input name=\"name\" value=\"";
+        // line 33
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 33, $this->source); })()), "getName", [], "method", false, false, false, 33), "html", null, true);
+        echo "\" id=\"name\" type=\"text\" class=\"validate\">
+                                <label class=\"active\" for=\"passwird\">Name</label>
+                            </div>
+                            <div class=\"input-field col s6\">
+                                <input name=\"pass\" value=\"";
+        // line 37
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "getPass", [], "method", false, false, false, 37), "html", null, true);
+        echo "\" id=\"password\" type=\"text\" class=\"validate\">
+                                <label class=\"active\" for=\"passwird\">Password</label>
+                            </div>
+                        </div>
+                        <div class=\"row\">
+                            <input type =\"submit\" class=\"right btn waves-effect waves-light\" value = \"Modification\"/>
+                        </div>
+                    </form>
                 </div>
                 <div class=\"card-action center\">
                     <nav>
@@ -89,20 +115,20 @@ class __TwigTemplate_3770aa66f0165f24e849df19f468307d extends Template
                             <ul>
                                 <li>
                                     <a href=\"/user/delete/";
-        // line 34
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 34, $this->source); })()), "getId", [], "method", false, false, false, 34), "html", null, true);
+        // line 51
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 51, $this->source); })()), "getId", [], "method", false, false, false, 51), "html", null, true);
         echo "\">Delete</a>
                                 </li>
                                 <li class=\"active\">
                                     <a href=\"/user/edit/";
-        // line 37
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "getId", [], "method", false, false, false, 37), "html", null, true);
+        // line 54
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 54, $this->source); })()), "getId", [], "method", false, false, false, 54), "html", null, true);
         echo "\">Edit</a>
                                 </li>
                                 <li>
                                     <a href=\"/user/info/";
-        // line 40
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 40, $this->source); })()), "getId", [], "method", false, false, false, 40), "html", null, true);
+        // line 57
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 57, $this->source); })()), "getId", [], "method", false, false, false, 57), "html", null, true);
         echo "\">Info</a>
                                 </li>
                             </ul>
@@ -127,7 +153,7 @@ class __TwigTemplate_3770aa66f0165f24e849df19f468307d extends Template
 
     public function getDebugInfo()
     {
-        return array (  105 => 40,  99 => 37,  93 => 34,  83 => 27,  77 => 23,  73 => 22,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  131 => 57,  125 => 54,  119 => 51,  102 => 37,  95 => 33,  89 => 30,  83 => 27,  77 => 23,  73 => 22,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -158,7 +184,24 @@ class __TwigTemplate_3770aa66f0165f24e849df19f468307d extends Template
         <div class=\"col s12 m12\">
             <div class=\"card blue-grey darken-1\">
                 <div class=\"card-content white-text\">
-                    <span class=\"card-title center\">{{ user.getName()|trim }}</span>
+                    <span class=\"card-title center\">Edit {{ user.getName() }}</span>
+
+                    <form action=\"/user/submit\" method=\"post\">
+                        <input type=\"hidden\" name=\"id\" value=\"{{ user.getId() }}\">
+                        <div class=\"row\">
+                            <div class=\"input-field col s6\">
+                                <input name=\"name\" value=\"{{ user.getName() }}\" id=\"name\" type=\"text\" class=\"validate\">
+                                <label class=\"active\" for=\"passwird\">Name</label>
+                            </div>
+                            <div class=\"input-field col s6\">
+                                <input name=\"pass\" value=\"{{ user.getPass() }}\" id=\"password\" type=\"text\" class=\"validate\">
+                                <label class=\"active\" for=\"passwird\">Password</label>
+                            </div>
+                        </div>
+                        <div class=\"row\">
+                            <input type =\"submit\" class=\"right btn waves-effect waves-light\" value = \"Modification\"/>
+                        </div>
+                    </form>
                 </div>
                 <div class=\"card-action center\">
                     <nav>

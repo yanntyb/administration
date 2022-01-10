@@ -82,7 +82,11 @@ class __TwigTemplate_135e450d03f8825ea9646c0a436ca9e3 extends Template
         // line 27
         echo twig_escape_filter($this->env, twig_trim_filter(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 27, $this->source); })()), "getName", [], "method", false, false, false, 27)), "html", null, true);
         echo "</span>
-                    <span>Article</span>
+                    <p>Mot de passe : ";
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 28, $this->source); })()), "getPass", [], "method", false, false, false, 28), "html", null, true);
+        echo "</p>
+                    <span>Article :</span>
                     <table>
                         <thead>
                             <th>ID</th>
@@ -90,21 +94,21 @@ class __TwigTemplate_135e450d03f8825ea9646c0a436ca9e3 extends Template
                         </thead>
                         <tbody>
                             ";
-        // line 35
+        // line 36
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 35, $this->source); })()), "getArticles", [], "method", false, false, false, 35));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 36, $this->source); })()), "getArticles", [], "method", false, false, false, 36));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 36
+            // line 37
             echo "                                <tr>
                                     <td><a href=\"/article/info/";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "getId", [], "method", false, false, false, 37), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "getId", [], "method", false, false, false, 38), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "getId", [], "method", false, false, false, 37), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "getId", [], "method", false, false, false, 38), "html", null, true);
             echo "</a></td>
                                     <td>";
-            // line 38
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "getTitle", [], "method", false, false, false, 38), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "getTitle", [], "method", false, false, false, 39), "html", null, true);
             echo "</td>
                                 </tr>
                             ";
@@ -112,7 +116,7 @@ class __TwigTemplate_135e450d03f8825ea9646c0a436ca9e3 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
+        // line 42
         echo "                        </tbody>
                     </table>
                 </div>
@@ -122,20 +126,20 @@ class __TwigTemplate_135e450d03f8825ea9646c0a436ca9e3 extends Template
                             <ul>
                                 <li>
                                     <a href=\"/user/delete/";
-        // line 49
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 49, $this->source); })()), "getId", [], "method", false, false, false, 49), "html", null, true);
+        // line 50
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 50, $this->source); })()), "getId", [], "method", false, false, false, 50), "html", null, true);
         echo "\">Delete</a>
                                 </li>
                                 <li>
                                     <a href=\"/user/edit/";
-        // line 52
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 52, $this->source); })()), "getId", [], "method", false, false, false, 52), "html", null, true);
+        // line 53
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 53, $this->source); })()), "getId", [], "method", false, false, false, 53), "html", null, true);
         echo "\">Edit</a>
                                 </li>
                                 <li class=\"active\">
                                     <a href=\"/user/info/";
-        // line 55
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 55, $this->source); })()), "getId", [], "method", false, false, false, 55), "html", null, true);
+        // line 56
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 56, $this->source); })()), "getId", [], "method", false, false, false, 56), "html", null, true);
         echo "\">Info</a>
                                 </li>
                             </ul>
@@ -160,7 +164,7 @@ class __TwigTemplate_135e450d03f8825ea9646c0a436ca9e3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  138 => 55,  132 => 52,  126 => 49,  116 => 41,  107 => 38,  101 => 37,  98 => 36,  94 => 35,  83 => 27,  77 => 23,  73 => 22,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  142 => 56,  136 => 53,  130 => 50,  120 => 42,  111 => 39,  105 => 38,  102 => 37,  98 => 36,  87 => 28,  83 => 27,  77 => 23,  73 => 22,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -192,7 +196,8 @@ class __TwigTemplate_135e450d03f8825ea9646c0a436ca9e3 extends Template
             <div class=\"card blue-grey darken-1\">
                 <div class=\"card-content white-text\">
                     <span class=\"card-title center\">{{ user.getName()|trim }}</span>
-                    <span>Article</span>
+                    <p>Mot de passe : {{ user.getPass() }}</p>
+                    <span>Article :</span>
                     <table>
                         <thead>
                             <th>ID</th>

@@ -7,6 +7,7 @@ class User
     private int $id;
     private string $name;
     private array $articles;
+    private string $pass;
 
     /**
      * @return array
@@ -62,6 +63,22 @@ class User
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getPass(): string
+    {
+        return $this->pass;
+    }
 
+    /**
+     * @param string $pass
+     * @return self
+     */
+    public function setPass(string $pass): self
+    {
+        $this->pass = $pass;
+        return $this;
+    }
 
 }

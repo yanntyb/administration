@@ -41,7 +41,7 @@ class UserController extends Controller
             foreach($articlesBean as $articleBean){
                 $articles[] = (new Article())->setId($articleBean->id)->setTitle($articleBean->title);
             }
-            $user = (new User())->setName($userBean->name)->setId($userBean->id)->setArticles($articles);
+            $user = (new User())->setName($userBean->name)->setId($userBean->id)->setArticles($articles)->setPass($userBean->password);
             $this->render("users/single.html.twig",["user" => $user]);
         }
         else{
@@ -75,11 +75,25 @@ class UserController extends Controller
             foreach($articlesBean as $articleBean){
                 $articles[] = (new Article())->setId($articleBean->id)->setTitle($articleBean->title);
             }
-            $user = (new User())->setName($userBean->name)->setId($userBean->id)->setArticles($articles);
+            $user = (new User())->setName($userBean->name)->setId($userBean->id)->setArticles($articles)->setPass($userBean->password);
             $this->render("users/edit.html.twig",["user" => $user]);
         }
         else{
             $this->showPage();
         }
+    }
+
+    public function update(){
+        if(isset($_POST["id"])){
+            $user = R::findOne("user","id = ?", [$_POST["id"]]);
+            if($user){
+                $user->password = $_POST["pass"];
+                $user->name = $_POST["name"];
+                R::store($user);
+                $this->edit($user->id);
+                return null;
+            }
+        }
+        $this->showPage();
     }
 }

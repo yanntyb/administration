@@ -30,7 +30,7 @@ $router->addRoute("populate User", "/user/populate",[UserController::class, "pop
 $router->addRoute("info User", "/user/info/{id}", [UserController::class, "info"]);
 $router->addRoute("delete User", "/user/delete/{id}", [UserController::class, "delete"]);
 $router->addRoute("edit User", "/user/edit/{id}", [UserController::class, "edit"]);
-$router->addRoute("submit Edit", "/user/submit", [UserController::class, "submit"]);
+$router->addRoute("submit Edit", "/user/submit", [UserController::class, "update"]);
 
 $query = str_replace("/index.php","",$_SERVER['PHP_SELF']);
 $router->handleQuery($query);
